@@ -2,129 +2,129 @@
   {
     "id": 0,
     "name": "Fly-Catching App",
-    "picture": "images/scottish-terrier.jpeg",
+    "picture": "elonm.jpg",
     "date": 818,
-    "type": "Scottish Terrier",
+    "type": "Practical App",
     "location": "Remote"
   },
   {
     "id": 1,
-    "name": "Dog-Catching App",
-    "picture": "images/scottish-terrier.jpeg",
-    "age": 3,
-    "breed": "Scottish Terrier",
-    "location": "Tooleville, West Virginia"
+    "name": "Fly-Catching App",
+    "picture": "elonm.jpg",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 2,
-    "name": "Collins",
-    "picture": "images/french-bulldog.jpeg",
-    "age": 2,
-    "breed": "French Bulldog",
-    "location": "Freeburn, Idaho"
+    "name": "Fly-Catching App",
+    "picture": "elonm.jpg",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 3,
-    "name": "Melissa",
-    "picture": "images/boxer.jpeg",
-    "age": 2,
-    "breed": "Boxer",
-    "location": "Camas, Pennsylvania"
+    "name": "Fly-Catching App",
+    "picture": "elonm.jpg",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 4,
-    "name": "Jeanine",
-    "picture": "images/french-bulldog.jpeg",
-    "age": 2,
-    "breed": "French Bulldog",
-    "location": "Gerber, South Dakota"
+    "name": "Fly-Catching App",
+    "picture": "elonm.jpg",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 5,
-    "name": "Elvia",
-    "picture": "images/french-bulldog.jpeg",
-    "age": 3,
-    "breed": "French Bulldog",
-    "location": "Innsbrook, Illinois"
+    "name": "Fly-Catching App",
+    "picture": "elonm.jpg",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 6,
-    "name": "Latisha",
-    "picture": "images/golden-retriever.jpeg",
-    "age": 3,
-    "breed": "Golden Retriever",
-    "location": "Soudan, Louisiana"
+    "name": "Fly-Catching App",
+    "picture": "elonm.jpg",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 7,
-    "name": "Coleman",
-    "picture": "images/golden-retriever.jpeg",
-    "age": 3,
-    "breed": "Golden Retriever",
-    "location": "Jacksonwald, Palau"
+    "name": "Fly-Catching App",
+    "picture": "",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 8,
-    "name": "Nichole",
-    "picture": "images/french-bulldog.jpeg",
-    "age": 2,
-    "breed": "French Bulldog",
-    "location": "Honolulu, Hawaii"
+    "name": "Fly-Catching App",
+    "picture": "",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 9,
-    "name": "Fran",
-    "picture": "images/boxer.jpeg",
-    "age": 3,
-    "breed": "Boxer",
-    "location": "Matheny, Utah"
+    "name": "Fly-Catching App",
+    "picture": "",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 10,
-    "name": "Leonor",
-    "picture": "images/boxer.jpeg",
-    "age": 2,
-    "breed": "Boxer",
-    "location": "Tyhee, Indiana"
+    "name": "Fly-Catching App",
+    "picture": "",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 11,
-    "name": "Dean",
-    "picture": "images/scottish-terrier.jpeg",
-    "age": 3,
-    "breed": "Scottish Terrier",
-    "location": "Windsor, Montana"
+    "name": "Fly-Catching App",
+    "picture": "",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 12,
-    "name": "Stevenson",
-    "picture": "images/french-bulldog.jpeg",
-    "age": 3,
-    "breed": "French Bulldog",
-    "location": "Kingstowne, Nevada"
+    "name": "Fly-Catching App",
+    "picture": "elonm.jpg",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 13,
-    "name": "Kristina",
-    "picture": "images/golden-retriever.jpeg",
-    "age": 4,
-    "breed": "Golden Retriever",
-    "location": "Sultana, Massachusetts"
+    "name": "Fly-Catching App",
+    "picture": "",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 14,
-    "name": "Ethel",
-    "picture": "images/golden-retriever.jpeg",
-    "age": 2,
-    "breed": "Golden Retriever",
-    "location": "Broadlands, Oregon"
+    "name": "Fly-Catching App",
+    "picture": "",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   },
   {
     "id": 15,
-    "name": "Terry",
-    "picture": "images/golden-retriever.jpeg",
-    "age": 2,
-    "breed": "Golden Retriever",
-    "location": "Dawn, Wisconsin"
+    "name": "Fly-Catching App",
+    "picture": "",
+    "date": 818,
+    "type": "Practical App",
+    "location": "Remote"
   }
 ]
