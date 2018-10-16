@@ -1,15 +1,15 @@
 [
   {
     "id": 0,
-    "name": "Frieda",
+    "name": "Fly-Catching App",
     "picture": "images/scottish-terrier.jpeg",
-    "age": 3,
-    "breed": "Scottish Terrier",
-    "location": "Lisco, Alabama"
+    "date": 818,
+    "type": "Scottish Terrier",
+    "location": "Remote"
   },
   {
     "id": 1,
-    "name": "Gina",
+    "name": "Dog-Catching App",
     "picture": "images/scottish-terrier.jpeg",
     "age": 3,
     "breed": "Scottish Terrier",

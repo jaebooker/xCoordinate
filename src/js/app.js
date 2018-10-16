@@ -4,19 +4,19 @@ App = {
 
   init: function() {
     // Load pets.
-    $.getJSON('../pets.json', function(data) {
-      var petsRow = $('#petsRow');
-      var petTemplate = $('#petTemplate');
+    $.getJSON('../projects.json', function(data) {
+      var projectsRow = $('#projectsRow');
+      var projectsTemplate = $('#projectsTemplate');
 
       for (i = 0; i < data.length; i ++) {
-        petTemplate.find('.panel-title').text(data[i].name);
-        petTemplate.find('img').attr('src', data[i].picture);
-        petTemplate.find('.pet-breed').text(data[i].breed);
-        petTemplate.find('.pet-age').text(data[i].age);
-        petTemplate.find('.pet-location').text(data[i].location);
-        petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
+        projectTemplate.find('.panel-title').text(data[i].name);
+        projectTemplate.find('img').attr('src', data[i].picture);
+        projectTemplate.find('.project-type').text(data[i].type);
+        projectTemplate.find('.project-date').text(data[i].date);
+        projectTemplate.find('.project-location').text(data[i].location);
+        projectTemplate.find('.btn-join').attr('data-id', data[i].id);
 
-        petsRow.append(petTemplate.html());
+        projectsRow.append(projectTemplate.html());
       }
     });
 
@@ -24,39 +24,71 @@ App = {
   },
 
   initWeb3: function() {
-    /*
-     * Replace me...
-     */
-
-    return App.initContract();
+      //Is there a web3 instance?
+      if (typeof web3 !== 'underfined') {
+          App.web3Provider = web3.currentProvider;
+      } else {
+          //is there's no web3, use Ganache
+          App.web3Provider = new Web3.providers.HttpProvider("http://localhost:7545");
+      }
+      web3 = new Web3(App.web3Provider);
+      return App.initContract();
   },
 
   initContract: function() {
-    /*
-     * Replace me...
-     */
-
-    return App.bindEvents();
+      $.getJSON('Adoption.json', function(data) {
+          //get the contract file and instantiate it truffle
+          var ProjectsArtifact = data;
+          App.contracts.Projects = TruffleContract(AdoptionArtifact);
+          //set provider
+          App.contracts.Projects.setProvider(App.web3Provider)
+          //use our contract to get and set projects
+          return App.markProjects();
+      });
+      return App.bindEvents();
   },
 
   bindEvents: function() {
     $(document).on('click', '.btn-adopt', App.handleAdopt);
   },
 
-  markAdopted: function(adopters, account) {
-    /*
-     * Replace me...
-     */
+  markProjects: function(projectAdopters, account) {
+      var projectAdoptionInstance;
+      App.contracts.Projects.deployed().then(function(instance) {
+          projectsInstance = instance;
+
+          return projectAdoptionInstance.getProjectAdopters.call();
+      }).then(function(projectAdopters) {
+          for (i = 0; i < projectAdopters.length; i++) {
+              if (projectAdopters[i] !== '0x0000000000000000000000000000000000000000')
+              $('.panel-project').eq(i).find('button').text('Success').attr('disabled', true);
+          }
+      }
+  }).catch(function(err) {
+      console.log(err.message);
+  });
   },
 
-  handleAdopt: function(event) {
+  handleJoin: function(event) {
     event.preventDefault();
-
     var petId = parseInt($(event.target).data('id'));
+    var projectAdoptionInstance;
+    web3.eth.getAccounts(function(err, account) {
+        if (err) {
+            console.log(err);
+        }
+        var account = accounts[0];
 
-    /*
-     * Replace me...
-     */
+        App.contracts.Projects.deployed().then(function(instance) {
+            projectAdoptionInstance = instance;
+            //use join by sending account
+            return projectAdoptionInstance.join(projectId, {from: account});
+        }).then(function(result) {
+            return App.markJoin();
+        }).catch(function(err) {
+            console.log(err.message);
+        });
+    });
   }
 
 };
