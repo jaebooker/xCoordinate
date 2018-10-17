@@ -29,7 +29,7 @@ App = {
           App.web3Provider = web3.currentProvider;
       } else {
           //is there's no web3, use Ganache
-          App.web3Provider = new Web3.providers.HttpProvider("http://localhost:7545");
+          App.web3Provider = new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545");
       }
       web3 = new Web3(App.web3Provider);
       return App.initContract();
