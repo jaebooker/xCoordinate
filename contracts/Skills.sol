@@ -11,9 +11,12 @@ contract Skill is Skills, Deadlines {
     string public name;
     address public token;
 
-    function skillSubmit(string _name, uint256 _deadline) public {
+    function skillSubmit(string _name, uint256 _deadline, address _token) public {
         require(_deadline > block.timestamp);
         name = _name;
         deadline = _deadline;
-        token = new FishToken(_deadline);
+        token = _token;
     }
+    function chooseSkill() public returns (bool success) {
+    }
+}
