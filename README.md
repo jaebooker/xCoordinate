@@ -10,3 +10,5 @@
     ```javascript
     // Serves the front-end on http://localhost:3000
     npm run dev
+
+//Thanks to Truffle boxes and tutorials for their assistance

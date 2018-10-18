@@ -29,7 +29,7 @@ App = {
           App.web3Provider = web3.currentProvider;
       } else {
           //is there's no web3, use Ganache
-          App.web3Provider = new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545");
+          App.web3Provider = new Web3.providers.HttpProvider("https://ropsten.etherscan.io/address/0x359f2c53358791bd225c6cdbd5fdc13e8951e0e9");
       }
       web3 = new Web3(App.web3Provider);
       return App.initContract();
@@ -60,8 +60,9 @@ App = {
           return projectAdoptionInstance.getProjectAdopters.call();
       }).then(function(projectAdopters) {
           for (i = 0; i < projectAdopters.length; i++) {
-              if (projectAdopters[i] !== '0x0000000000000000000000000000000000000000')
+              if (parseInt(projectAdopters[i]) > 1) {
               $('.panel-project').eq(i).find('button').text('Success').attr('disabled', true);
+          }
           }
       }).catch(function(err) {
       console.log(err.message);
